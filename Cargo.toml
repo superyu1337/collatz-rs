@@ -1,0 +1,14 @@
+[package]
+name = "collatz-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "3.2.16", features = ["derive"] }
+num_cpus = "1.13.1"
+threadpool = "1.8.1"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+strip = "symbols"
